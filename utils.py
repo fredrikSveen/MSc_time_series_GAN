@@ -24,6 +24,7 @@ utils.py
 import numpy as np
 import tensorflow as tf
 import pandas as pd
+import matplotlib.pyplot as plt
 
 
 def train_test_divide (data_x, data_x_hat, data_t, data_t_hat, train_rate = 0.8, reproduce=False):
@@ -162,6 +163,9 @@ def batch_generator(data, time, batch_size, reproduce=False):
   
   return X_mb, T_mb
 
+###########################################################################################
+# Other helpful functions 
+
 def list_to_df(list_):
     # The input list is 3-d because the data is separated in overlapping windows,
     # The list is firstly transformed to 2d
@@ -171,3 +175,15 @@ def list_to_df(list_):
     # Then the 2d list is transformed into a dataframe
     generated_df = pd.DataFrame(list_2d, columns=list(range(9)), dtype=float)
     return generated_df
+
+def df_plot_separate(df, title=""):
+  df.plot(subplots=True, layout=(3,3), figsize=(16, 12))
+
+  if title == "":
+    try:
+      title = df.name
+    except:
+      title = "Dataframe with features plotted separately"
+  plt.suptitle(title)
+  plt.tight_layout()
+  plt.show()

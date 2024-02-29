@@ -40,6 +40,7 @@ def synt_data_from_file(filename):
     curr_dir = os.getcwd()
     filepath = os.path.join(curr_dir, 'synt_data', filename)
     df = pd.read_csv(filepath)
+    df.name = "Synthetic data"
     return df
 
 ################################################################################
@@ -68,6 +69,7 @@ def generate_from_pretrained(model, model_filename, orig_data, reproduce=False, 
         print("Starting data generation with TimeGAN")
         synt_data_list = timegan_from_pretrained(model_filename, ori_data, parameters, reproduce)
         synt_data = list_to_df(synt_data_list)
+        synt_data.name = "Synthetic data"
         print("Data generation complete")
     else:
         print("The specified model type is not supported.")
