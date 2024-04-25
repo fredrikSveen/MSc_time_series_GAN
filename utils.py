@@ -177,7 +177,7 @@ def list_to_df(list_):
     return generated_df
 
 def df_plot_separate(df, title=""):
-  df.plot(subplots=True, layout=(3,3), figsize=(16, 12))
+  df.loc[:500].plot(subplots=True, layout=(3,3), figsize=(16, 10))
 
   if title == "":
     try:

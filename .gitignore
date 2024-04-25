@@ -162,3 +162,5 @@ cython_debug/
 # Different datasets
 synt_data/
 data/
+generated_dataframes/
+sine_data/
