@@ -98,6 +98,8 @@ def generate_sine_wave(dim, n, seed = np.random.randint(0, 2000), deterministic 
             freq = random.uniform(0.25, 0.75)
             phase = random.uniform(0, 0.1)
             sine_data.append([np.sin(freq * j + phase) for j in range(n)])
-        
+            print(f'Frequency: {freq}') 
+
+       
     sine_data = np.transpose(sine_data)
     return sine_data
