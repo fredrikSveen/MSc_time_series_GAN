@@ -4,10 +4,13 @@ from pmdarima import auto_arima
 import numpy as np 
 import pandas as pd 
 import matplotlib.pyplot as plt 
+import sys
   
 # Ignore harmless warnings 
 import warnings 
 warnings.filterwarnings("ignore") 
+
+sys.stdout.flush()
 
 data = np.loadtxt(f'sine_data/sine_123_1000_1.csv', delimiter = ",",skiprows = 1)
 # data = data[0]
