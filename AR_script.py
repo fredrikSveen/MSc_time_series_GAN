@@ -10,10 +10,10 @@ import sys
 import warnings 
 warnings.filterwarnings("ignore") 
 
-data = np.loadtxt(f'sine_data/sine_123_1000_9.csv', delimiter = ",",skiprows = 1)
+data = np.loadtxt(f'sine_data/sine_123_1000_1.csv', delimiter = ",",skiprows = 1)
 # data = data[0]
 data = pd.DataFrame(data)
-data = data[8]
+data = data[1]
 print(type(data))
 
 # Fit auto_arima function to dataset 
