@@ -46,7 +46,7 @@ else:
                                 suppress_warnings = True,  # we don't want convergence warnings 
                                 stepwise = True)           # set to stepwise
         forecast = pd.DataFrame(best_model.predict(n_periods = seq_len))
-        generated_sines.append(forecast.values)
+        generated_sines.append(forecast.values.tolist())
         # Save generated data to csv
     x = datetime.datetime.now()
 
