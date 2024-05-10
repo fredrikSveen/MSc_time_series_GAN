@@ -3,11 +3,18 @@ This is the code related to my MSc thesis at the Norwegian University of Science
 
 This MSc thesis is the next step of the project started in my specialization project, which took place during the Fall of 2023 and can be found [here](https://github.com/fredrikSveen/time_series_gan_project).
 
-The following state-of-the-art methods are explored, but not all is used in the MSc itself.
+The following state-of-the-art methods are explored, but only TimeGAN is properly tested and discussed in the thesis. The other models listed below is models I believe could be suitable
 
-|Generative model        | Status                                | Github link                                          |
-|------------------------|---------------------------------------|------------------------------------------------------|
-|TimeGAN                 |Not able to generate long enough series| [Link](https://github.com/fredrikSveen/TimeGAN)      |
-|COSCI-GAN               |Under exploration                      | [Link](https://github.com/fredrikSveen/COSCI-GAN)    |
-|Fourier Flows (+RealNVP)|Under exploration                      | [Link](https://github.com/fredrikSveen/Fourier-flows)|
-|GMMN                    |Being setup                            | [Link](https://github.com/fredrikSveen/gmmn)         |
+|Generative model        | Capabilities                                            | Github link                                          |
+|------------------------|---------------------------------------------------------|------------------------------------------------------|
+|TimeGAN                 |Properly tested and discussed in the thesis              | [Link](https://github.com/fredrikSveen/TimeGAN)      |
+|COSCI-GAN               |Has separate discriminators, and a central disciminator  | [Link](https://github.com/fredrikSveen/COSCI-GAN)    |
+|Fourier Flows (+RealNVP)|Doing sequence generation in the frequency domain        | [Link](https://github.com/fredrikSveen/Fourier-flows)|
+|GMMN                    |Not properly explored                                    | [Link](https://github.com/fredrikSveen/gmmn)         |
+
+To compare TimeGAN to some of the more traditional methods, the methods listed below is also properly tested and discussed in the thesis
+
+|Traditional method             | Description                                                    | File within this Github project                      |
+|-------------------------------|----------------------------------------------------------------|------------------------------------------------------|
+|Vectorized autoregressive (VAR)|A simple autoregressive method that can handle multivariate data|[AR_model.ipynb](https://github.com/fredrikSveen/MSc_time_series_GAN/blob/master/AR_model.ipynb)  |
+|Basic RNN                      |A basic RNN (simpler than the GRU used in TimeGAN)              |[simple_rnn.ipynb](https://github.com/fredrikSveen/MSc_time_series_GAN/blob/master/simple_rnn.ipynb)|
