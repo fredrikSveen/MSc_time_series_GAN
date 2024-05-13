@@ -18,3 +18,10 @@ To compare TimeGAN to some of the more traditional methods, the methods listed b
 |-------------------------------|----------------------------------------------------------------|------------------------------------------------------|
 |Vectorized autoregressive (VAR)|A simple autoregressive method that can handle multivariate data|[AR_model.ipynb](https://github.com/fredrikSveen/MSc_time_series_GAN/blob/master/AR_model.ipynb)  |
 |Basic RNN                      |A basic RNN (simpler than the GRU used in TimeGAN)              |[simple_rnn.ipynb](https://github.com/fredrikSveen/MSc_time_series_GAN/blob/master/simple_rnn.ipynb)|
+
+
+
+### What are the different files?
+|Filename                 |Description                                                        |
+|-------------------------|-------------------------------------------------------------------|
+|[AR_model.ipynb](AR_model.ipynb)|                                                            |
