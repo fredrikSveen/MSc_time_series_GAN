@@ -98,8 +98,21 @@ def generate_sine_wave(dim, n, seed = np.random.randint(0, 2000), deterministic 
             freq = random.uniform(0.25, 0.75)
             phase = random.uniform(0, 0.1)
             sine_data.append([np.sin(freq * j + phase) for j in range(n)])
+            # print(f'Frequency: {freq}') 
+            print(f'Angular frequency: {freq/(2*np.pi)}') 
             print(f'Frequency: {freq}') 
 
        
     sine_data = np.transpose(sine_data)
     return sine_data
+
+def add_additional_sine(df_of_sines, add_sine):
+    print(f'Length of the original sines are {df_of_sines.shape[0]} and the length og the additional sine is {len(add_sine)}')
+    add_sine.head()
+    if df_of_sines.shape[0] != len(add_sine):
+        print(f'The sine you are trying to add is not the same length as sines in df_of_sines')
+        exit()
+    updated_sines = df_of_sines.copy(deep=True)
+    for col in df_of_sines.columns:
+        updated_sines[col] = df_of_sines[col] + add_sine[0]
+    return updated_sines
