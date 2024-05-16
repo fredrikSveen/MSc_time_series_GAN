@@ -37,6 +37,7 @@ To compare TimeGAN to some of the more traditional methods, the methods listed b
 |[power_spectrums.ipynb](power_spectrums.ipynb)|Using FFT to find the magnitude spectrum om the simple sines generated, and then using the spectrum to estimate the frequency of the generated sine   |
 |[publicdata.py](publicdata.py)|File made to easily import idustrial data from Cognite OID   |
 |[simple_rnn.ipynb](simple_rnn.ipynb)|Adaptation of a simple LSTM model to forecast data   |
+|[statistical_evaluation.ipynb](statistical_evaluation.ipynb)|Statistical analysis of the generated data. Computation of KL and JS divergence|
 |[timegan.py](timegan.py)| The model definition of TimeGAN  |
 |[utils.py](utils.py)| Methods used i [timegan.py](timegan.py) and some general list processing functions. |
 |[visual_analysis.ipynb](visual_analysis.ipynb)| Perform PCA and t-SNE on the generated data as a visual evaluation method  |   
