@@ -164,3 +164,5 @@ synt_data/
 data/
 generated_dataframes/
 sine_data/
+figures/
+synthetic_complex_sines/
