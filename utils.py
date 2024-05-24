@@ -187,3 +187,17 @@ def df_plot_separate(df, title=""):
   plt.suptitle(title)
   plt.tight_layout()
   plt.show()
+
+def plot_loc_right(df, title=None, subplots=False, figsize=(12,8)):
+    axes = df.plot(title=title, subplots=subplots, figsize=figsize)
+    axes = axes.flat  # .ravel() and .flatten() also work
+
+    # extract the figure object to use figure level methods
+    fig = axes[0].get_figure()
+
+    # iterate through each axes to use axes level methods
+    for ax in axes:
+        
+        ax.legend(loc='right', fontsize=14)
+        
+    plt.show()
