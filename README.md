@@ -43,3 +43,8 @@ To compare TimeGAN to some of the more traditional methods, the methods listed b
 |[timegan.py](timegan.py)| The model definition of TimeGAN  |
 |[utils.py](utils.py)| Methods used i [timegan.py](timegan.py) and some general list processing functions. |
 |[visual_analysis.ipynb](visual_analysis.ipynb)| Perform PCA and t-SNE on the generated data as a visual evaluation method  |   
+
+
+### Generated and original data files
+To save storage space on GitHUB and to not have to upload GBs of data, most of the generated data and the original data is not included.
+If the reader want to see and use the data files, these can be provided if asked for.
